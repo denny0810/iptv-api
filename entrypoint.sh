@@ -12,12 +12,14 @@ done
 # 激活虚拟环境
 . /.venv/bin/activate
 
-# 配置 Cron 任务（Alpine 路径）
+# 配置 Cron 任务（通过 crontab 命令）
 if [ -n "$UPDATE_CRON" ]; then
-  echo "SHELL=/bin/sh" > /etc/crontabs/root
-  echo "PATH=$PATH" >> /etc/crontabs/root
-  echo "$UPDATE_CRON . /etc/profile; cd $APP_WORKDIR && . /.venv/bin/activate && python main.py >> /var/log/cron.log 2>&1" >> /etc/crontabs/root
-  chmod 0644 /etc/crontabs/root
+  CRON_FILE=$(mktemp)
+  echo "SHELL=/bin/sh" > "$CRON_FILE"
+  echo "PATH=/.venv/bin:/usr/local/bin:/usr/bin:/bin" >> "$CRON_FILE"
+  echo "$UPDATE_CRON . /etc/profile; cd $APP_WORKDIR && . /.venv/bin/activate && python main.py >> /var/log/cron.log 2>&1" >> "$CRON_FILE"
+  crontab "$CRON_FILE"
+  rm "$CRON_FILE"
 fi
 
 # dcron log level
