@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# 复制配置文件
 for file in /iptv-api-config/*; do
   filename=$(basename "$file")
   target_file="$APP_WORKDIR/config/$filename"
@@ -8,12 +9,15 @@ for file in /iptv-api-config/*; do
   fi
 done
 
+# 激活虚拟环境
 . /.venv/bin/activate
 
-crontab -d
-
+# 配置 Cron 任务（Alpine 路径）
 if [ -n "$UPDATE_CRON" ]; then
-  (crontab -l ; echo "$UPDATE_CRON cd $APP_WORKDIR && /.venv/bin/python main.py") | crontab -
+  echo "SHELL=/bin/sh" > /etc/crontabs/root
+  echo "PATH=$PATH" >> /etc/crontabs/root
+  echo "$UPDATE_CRON . /etc/profile; cd $APP_WORKDIR && . /.venv/bin/activate && python main.py >> /var/log/cron.log 2>&1" >> /etc/crontabs/root
+  chmod 0644 /etc/crontabs/root
 fi
 
 # dcron log level
@@ -26,8 +30,8 @@ fi
 # LOG_INFO	6	[* informational *]
 # LOG_DEBUG	7	[* debug-level messages *]
 
-/usr/sbin/crond -b -L /tmp/dcron.log -l 4 &
+# 启动 cron（日志统一到 /var/log/cron.log）
+/usr/sbin/crond -l 4 -f -L /var/log/cron.log &
 
-python $APP_WORKDIR/main.py &
-
-python -m gunicorn service.app:app -b 0.0.0.0:$APP_PORT --timeout=1000
+# 启动主应用（Gunicorn 作为主进程）
+exec python -m gunicorn service.app:app -b 0.0.0.0:$APP_PORT --timeout=1000
