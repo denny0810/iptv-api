@@ -171,6 +171,7 @@ def get_channel_items() -> CategoryChannelData:
                                         for info in old_result[cate][name]:
                                             if info and info["url"] not in urls:
                                                 channels[cate][name].append(info)
+                                                frozen_channels.discard(info["url"])
             except Exception as e:
                 print(f"Error loading cache file: {e}")
                 pass
@@ -769,7 +770,7 @@ def sort_channel_result(channel_data, result=None, filter_host=False, ipv6_suppo
             if not values:
                 continue
             whitelist_result = []
-            test_result = [] if filter_host or not result else result.get(cate, {}).get(name, [])
+            test_result = result.get(cate, {}).get(name, []) if result else []
             for value in values:
                 if value["origin"] in ["whitelist", "live", "hls"] or (
                         not ipv6_support and result and value["ipv_type"] == "ipv6"
@@ -785,26 +786,27 @@ def sort_channel_result(channel_data, result=None, filter_host=False, ipv6_suppo
                 total_result,
                 check=False,
             )
-            for result in total_result:
+            for item in total_result:
                 logger.info(
-                    f"Name: {name}, URL: {result.get('url')}, IPv_Type: {result.get("ipv_type")}, Location: {result.get('location')}, ISP: {result.get('isp')}, Date: {result["date"]}, Delay: {result.get('delay') or -1} ms, Speed: {result.get('speed') or 0:.2f} M/s, Resolution: {result.get('resolution')}"
+                    f"Name: {name}, URL: {item.get('url')}, IPv_Type: {item.get("ipv_type")}, Location: {item.get('location')}, ISP: {item.get('isp')}, Date: {item["date"]}, Delay: {item.get('delay') or -1} ms, Speed: {item.get('speed') or 0:.2f} M/s, Resolution: {item.get('resolution')}"
                 )
     logger.handlers.clear()
     return channel_result
 
 
-def process_write_content(path: str,
-                          data: CategoryChannelData,
-                          live: bool = False,
-                          hls: bool = False,
-                          live_url: str = None,
-                          hls_url: str = None,
-                          open_empty_category: bool = False,
-                          ipv_type_prefer: list[str] = None,
-                          origin_type_prefer: list[str] = None,
-                          first_channel_name: str = None,
-                          enable_print: bool = False
-                          ):
+def process_write_content(
+        path: str,
+        data: CategoryChannelData,
+        live: bool = False,
+        hls: bool = False,
+        live_url: str = None,
+        hls_url: str = None,
+        open_empty_category: bool = False,
+        ipv_type_prefer: list[str] = None,
+        origin_type_prefer: list[str] = None,
+        first_channel_name: str = None,
+        enable_print: bool = False
+):
     """
     Get channel write content
     :param path: write into path

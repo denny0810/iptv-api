@@ -25,8 +25,10 @@
 
 [中文](./README.md) | English
 
-🎉💻[IPTV-Web](https://github.com/Guovin/iptv-web): IPTV live stream management platform, supports online playback and
+🎉💻 [IPTV-Web](https://github.com/Guovin/iptv-web): IPTV live stream management platform, supports online playback and
 other features, under development...
+
+💖 [Channel Alias Collection Plan](https://github.com/Guovin/iptv-api/discussions/1082)
 
 - [✅ Features](#features)
 - [🔗 Latest results](#latest-results)
@@ -40,6 +42,7 @@ other features, under development...
 - [🗓️ Changelog](./CHANGELOG.md)
 - [❤️ Appreciate](#appreciate)
 - [👀 Follow the public account](#follow)
+- [⭐️ Star History](#star-history)
 - [📣 Disclaimer](#disclaimer)
 - [⚖️ License](#license)
 
@@ -86,8 +89,8 @@ other features, under development...
 ## Latest results
 
 > [!IMPORTANT]\
-> The following addresses may fail to be accessed domestically. It is recommended to prepend a proxy address for use.
-> The public account can reply with `CDN` to obtain it.
+> The following addresses may not be stable for access within China. It is recommended to prepend a proxy address for
+> use. You can reply with `cdn` in the public account to obtain it.
 
 ### Live Sources
 
@@ -147,16 +150,17 @@ https://raw.githubusercontent.com/Guovin/iptv-api/gd/source.json
 | open_headers           | Enable to use the request header verification information contained in M3U, used for speed measurement and other operations. Note: Only a few players support playing this type of interface with verification information, which is turned off by default                                                                                                                                                                       | False             |
 | app_port               | Page service port, used to control the port number of the page service                                                                                                                                                                                                                                                                                                                                                           | 8000              |
 | cdn_url                | CDN proxy acceleration address, used for accelerated access to subscription sources, channel icons and other resources                                                                                                                                                                                                                                                                                                           |                   |
-| location               | Interface location, used to control the result to only include the filled location type, supports keyword filtering, separated by English commas, not filled in means no location specified, it is recommended to use the location close to the user, which can improve the playback experience                                                                                                                                  |                   |
 | final_file             | Generated result file path                                                                                                                                                                                                                                                                                                                                                                                                       | output/result.txt |
 | hotel_num              | The number of preferred hotel source interfaces in the results                                                                                                                                                                                                                                                                                                                                                                   | 10                |
 | hotel_page_num         | Number of pages to retrieve for hotel regions                                                                                                                                                                                                                                                                                                                                                                                    | 1                 |
 | hotel_region_list      | List of hotel source regions, 'all' indicates all regions                                                                                                                                                                                                                                                                                                                                                                        | all               |
+| isp                    | Interface operator, used to control the result to only include the filled operator type, supports keyword filtering, separated by English commas, not filled in means no operator specified                                                                                                                                                                                                                                      |                   |
 | ipv4_num               | The preferred number of IPv4 interfaces in the result                                                                                                                                                                                                                                                                                                                                                                            | 5                 |
 | ipv6_num               | The preferred number of IPv6 interfaces in the result                                                                                                                                                                                                                                                                                                                                                                            | 5                 |
 | ipv6_support           | It is forced to consider that the current network supports IPv6 and skip the check                                                                                                                                                                                                                                                                                                                                               | False             |
 | ipv_type               | The protocol type of interface in the generated result, optional values: ipv4, ipv6, all                                                                                                                                                                                                                                                                                                                                         | all               |
 | ipv_type_prefer        | Interface protocol type preference, prioritize interfaces of this type in the results, optional values: ipv4, ipv6, auto                                                                                                                                                                                                                                                                                                         | ipv6,ipv4         |
+| location               | Interface location, used to control the result to only include the filled location type, supports keyword filtering, separated by English commas, not filled in means no location specified, it is recommended to use the location close to the user, which can improve the playback experience                                                                                                                                  |                   |
 | local_file             | Local source file path                                                                                                                                                                                                                                                                                                                                                                                                           | config/local.txt  |
 | local_num              | Preferred number of local source interfaces in the result                                                                                                                                                                                                                                                                                                                                                                        | 10                |
 | min_resolution         | Minimum interface resolution, requires enabling open_filter_resolution to take effect                                                                                                                                                                                                                                                                                                                                            | 1920x1080         |
@@ -167,7 +171,6 @@ https://raw.githubusercontent.com/Guovin/iptv-api/gd/source.json
 | multicast_region_list  | Multicast source region list, 'all' indicates all regions                                                                                                                                                                                                                                                                                                                                                                        | all               |
 | online_search_num      | The number of preferred keyword search interfaces in the results                                                                                                                                                                                                                                                                                                                                                                 | 0                 |
 | online_search_page_num | Page retrieval quantity for keyword search channels                                                                                                                                                                                                                                                                                                                                                                              | 1                 |
-| isp                    | Interface operator, used to control the result to only include the filled operator type, supports keyword filtering, separated by English commas, not filled in means no operator specified                                                                                                                                                                                                                                      |                   |
 | origin_type_prefer     | Preferred interface source of the result, the result is sorted according to this order, separated by commas, for example: local, hotel, multicast, subscribe, online_search; local: local source, hotel: hotel source, multicast: multicast source, subscribe: subscription source, online_search: keyword search; If not filled in, it means that the source is not specified, and it is sorted according to the interface rate |                   |
 | recent_days            | Retrieve interfaces updated within a recent time range (in days), reducing appropriately can avoid matching issues                                                                                                                                                                                                                                                                                                               | 30                |
 | request_timeout        | Query request timeout duration, in seconds (s), used to control the timeout and retry duration for querying interface text links. Adjusting this value can optimize update time.                                                                                                                                                                                                                                                 | 10                |
@@ -178,6 +181,7 @@ https://raw.githubusercontent.com/Guovin/iptv-api/gd/source.json
 | subscribe_num          | The number of preferred subscribe source interfaces in the results                                                                                                                                                                                                                                                                                                                                                               | 10                |
 | time_zone              | Time zone, can be used to control the time zone displayed by the update time, optional values: Asia/Shanghai or other time zone codes                                                                                                                                                                                                                                                                                            | Asia/Shanghai     |
 | urls_limit             | Number of interfaces per channel                                                                                                                                                                                                                                                                                                                                                                                                 | 10                |
+| update_interval        | Scheduled execution update interval, unit hours, set 0 or empty means run only once, does not apply to workflow                                                                                                                                                                                                                                                                                                                  | 12                |
 | update_time_position   | Update time display position, need to enable open_update_time to take effect, optional values: top, bottom, top: display at the top of the result, bottom: display at the bottom of the result                                                                                                                                                                                                                                   | top               |
 
 ## Quick Start
@@ -211,8 +215,8 @@ pipenv run service
 
 ### GUI Software
 
-1. Download [IPTV-API update software](https://github.com/Guovin/iptv-api/releases), open the software, click update to
-   complete the update
+1. Download the [IPTV-API Update Software](https://github.com/Guovin/iptv-api/releases), open the software, and click
+   Start to perform the update
 
 2. Or run the following command in the project directory to open the GUI software:
 
@@ -256,11 +260,10 @@ Taking the host path /etc/docker as an example:
 
 ##### Environment Variables:
 
-| Variable    | Description          | Default Value      |
-|:------------|:---------------------|:-------------------|
-| APP_HOST    | Service host address | "http://localhost" |
-| APP_PORT    | Service port         | 8000               |
-| UPDATE_CRON | Scheduled task time  | "0 22,10 * * *"    |
+| Variable | Description          | Default Value      |
+|:---------|:---------------------|:-------------------|
+| APP_HOST | Service host address | "http://localhost" |
+| APP_PORT | Service port         | 8000               |
 
 #### 3. Update Results
 
@@ -321,6 +324,10 @@ Taking the host path /etc/docker as an example:
 Wechat public account search for Govin, or scan the code to receive updates and learn more tips:
 
 ![Wechat public account](./static/images/qrcode.jpg)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Guovin/iptv-api&type=Date)](https://star-history.com/#Guovin/iptv-api&Date)
 
 ## Disclaimer
 

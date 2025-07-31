@@ -25,7 +25,9 @@
 
 [English](./README_en.md) | 中文
 
-🎉💻[IPTV-Web](https://github.com/Guovin/iptv-web)：IPTV电视直播源管理平台，支持在线播放等功能，开发中...
+🎉💻 [IPTV-Web](https://github.com/Guovin/iptv-web)：IPTV电视直播源管理平台，支持在线播放等功能，开发中...
+
+💖 [频道别名收集计划](https://github.com/Guovin/iptv-api/discussions/1082)
 
 - [✅ 特点](#特点)
 - [🔗 最新结果](#最新结果)
@@ -39,6 +41,7 @@
 - [🗓️ 更新日志](./CHANGELOG.md)
 - [❤️ 赞赏](#赞赏)
 - [👀 关注公众号](#关注)
+- [⭐️ Star统计](#Star统计)
 - [📣 免责声明](#免责声明)
 - [⚖️ 许可证](#许可证)
 
@@ -82,7 +85,7 @@
 ## 最新结果
 
 > [!IMPORTANT]\
-> 以下地址国内访问可能会失败，建议在前拼接代理地址使用，公众号可回复`CDN`获取
+> 以下地址国内可能无法稳定访问，推荐在前拼接代理地址使用，公众号可回复`cdn`获取
 
 ### 直播源
 
@@ -142,16 +145,17 @@ https://raw.githubusercontent.com/Guovin/iptv-api/gd/source.json
 | open_headers           | 开启使用M3U内含的请求头验证信息，用于测速等操作，注意：只有个别播放器支持播放这类含验证信息的接口，默认为关闭                                                                                                              | False             |
 | app_port               | 页面服务端口，用于控制页面服务的端口号                                                                                                                                                   | 8000              |
 | cdn_url                | CDN代理加速地址，用于订阅源、频道图标等资源的加速访问                                                                                                                                          |                   |
-| location               | 接口归属地，用于控制结果只包含填写的归属地类型，支持关键字过滤，英文逗号分隔，不填写表示不指定归属地，建议使用靠近使用者的归属地，能提升播放体验                                                                                              |                   |
 | final_file             | 生成结果文件路径                                                                                                                                                              | output/result.txt |
 | hotel_num              | 结果中偏好的酒店源接口数量                                                                                                                                                         | 10                |
 | hotel_page_num         | 酒店地区获取分页数量                                                                                                                                                            | 1                 |
 | hotel_region_list      | 酒店源地区列表，"全部"表示所有地区                                                                                                                                                    | 全部                |
+| isp                    | 接口运营商，用于控制结果中只包含填写的运营商类型，支持关键字过滤，英文逗号分隔，不填写表示不指定运营商                                                                                                                   |                   |
 | ipv4_num               | 结果中偏好的 IPv4 接口数量                                                                                                                                                      | 5                 |
 | ipv6_num               | 结果中偏好的 IPv6 接口数量                                                                                                                                                      | 5                 |
 | ipv6_support           | 强制认为当前网络支持IPv6，跳过检测                                                                                                                                                   | False             |
 | ipv_type               | 生成结果中接口的协议类型，可选值：ipv4、ipv6、全部、all                                                                                                                                     | 全部                |
 | ipv_type_prefer        | 接口协议类型偏好，优先将该类型的接口排在结果前面，可选值：ipv4、ipv6、自动、auto                                                                                                                        | ipv6,ipv4         |
+| location               | 接口归属地，用于控制结果只包含填写的归属地类型，支持关键字过滤，英文逗号分隔，不填写表示不指定归属地，建议使用靠近使用者的归属地，能提升播放体验                                                                                              |                   |
 | local_file             | 本地源文件路径                                                                                                                                                               | config/local.txt  |
 | local_num              | 结果中偏好的本地源接口数量                                                                                                                                                         | 10                |
 | min_resolution         | 接口最小分辨率，需要开启 open_filter_resolution 才能生效                                                                                                                              | 1920x1080         |
@@ -162,7 +166,6 @@ https://raw.githubusercontent.com/Guovin/iptv-api/gd/source.json
 | multicast_region_list  | 组播源地区列表，"全部"表示所有地区                                                                                                                                                    | 全部                |
 | online_search_num      | 结果中偏好的关键字搜索接口数量                                                                                                                                                       | 0                 |
 | online_search_page_num | 关键字搜索频道获取分页数量                                                                                                                                                         | 1                 |
-| isp                    | 接口运营商，用于控制结果中只包含填写的运营商类型，支持关键字过滤，英文逗号分隔，不填写表示不指定运营商                                                                                                                   |                   |
 | origin_type_prefer     | 结果偏好的接口来源，结果优先按该顺序进行排序，逗号分隔，例如：local,hotel,multicast,subscribe,online_search；local：本地源，hotel：酒店源，multicast：组播源，subscribe：订阅源，online_search：关键字搜索；不填写则表示不指定来源，按照接口速率排序 |                   |
 | recent_days            | 获取最近时间范围内更新的接口（单位天），适当减小可避免出现匹配问题                                                                                                                                     | 30                |
 | request_timeout        | 查询请求超时时长，单位秒(s)，用于控制查询接口文本链接的超时时长以及重试时长，调整此值能优化更新时间                                                                                                                   | 10                |
@@ -173,6 +176,7 @@ https://raw.githubusercontent.com/Guovin/iptv-api/gd/source.json
 | subscribe_num          | 结果中偏好的订阅源接口数量                                                                                                                                                         | 10                |
 | time_zone              | 时区，可用于控制更新时间显示的时区，可选值：Asia/Shanghai 或其它时区编码                                                                                                                           | Asia/Shanghai     |
 | urls_limit             | 单个频道接口数量                                                                                                                                                              | 10                |
+| update_interval        | 定时执行更新时间间隔，单位小时，设置0或空则只运行一次，不作用于工作流                                                                                                                                   | 12                |
 | update_time_position   | 更新时间显示位置，需要开启 open_update_time 才能生效，可选值：top、bottom，top: 显示于结果顶部，bottom: 显示于结果底部                                                                                       | top               |
 
 ## 快速上手
@@ -205,7 +209,7 @@ pipenv run service
 
 ### GUI 软件
 
-1. 下载[IPTV-API 更新软件](https://github.com/Guovin/iptv-api/releases)，打开软件，点击更新，即可完成更新
+1. 下载[IPTV-API 更新软件](https://github.com/Guovin/iptv-api/releases)，打开软件，点击启动，即可进行更新
 
 2. 或者在项目目录下运行以下命令，即可打开 GUI 软件：
 
@@ -248,11 +252,10 @@ docker run -d -p 8000:8000 guovern/iptv-api
 
 ##### 环境变量：
 
-| 变量          | 描述                 | 默认值                |
-|:------------|:-------------------|:-------------------|
-| APP_HOST    | 服务host地址，可修改使用公网域名 | "http://localhost" |
-| APP_PORT    | 服务端口               | 8000               |
-| UPDATE_CRON | 定时任务执行时间           | "0 22,10 * * *"    |
+| 变量       | 描述                 | 默认值                |
+|:---------|:-------------------|:-------------------|
+| APP_HOST | 服务host地址，可修改使用公网域名 | "http://localhost" |
+| APP_PORT | 服务端口               | 8000               |
 
 #### 3. 更新结果
 
@@ -312,6 +315,10 @@ docker run -d -p 8000:8000 guovern/iptv-api
 微信公众号搜索 Govin，或扫码，接收更新推送、学习更多使用技巧：
 
 ![微信公众号](./static/images/qrcode.jpg)
+
+## Star统计
+
+[![Star统计](https://api.star-history.com/svg?repos=Guovin/iptv-api&type=Date)](https://star-history.com/#Guovin/iptv-api&Date)
 
 ## 免责声明
 
