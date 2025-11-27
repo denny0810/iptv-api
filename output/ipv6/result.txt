@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2025-11-27 18:46:58,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
+2025-11-28 06:34:54,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
 
 📺央视频道,#genre#
 CCTV-1,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
@@ -842,11 +842,11 @@ CETV-4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8
 浙江民生休闲,http://ali-vl.cztv.com/channels/lantian/channel006/360p.m3u8
 浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-3.m3u8
 浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-8.m3u8
+浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-10.m3u8
 浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-2.m3u8
 浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-7.ctv
 浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-5.m3u8
 浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-9.m3u8
-浙江民生休闲,https://stream1.freetv.fun/zhe-jiang-min-sheng-6.ctv
 浙江数码时代,https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8\r\n
 浙江教科影院,http://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
 浙江教科影视,http://zwebl02.cztv.com/live/channel041080P.m3u8?auth_key=2524708799-0-0-f195b808217db133bfd648edc01e91fa
