@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2025-11-28 18:39:32,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
+2025-11-29 06:33:05,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
 
 📺央视频道,#genre#
 CCTV-1,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
@@ -1450,8 +1450,8 @@ CETV-4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8
 湖北生活,http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638072c62e405/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUUAdKgLqNB5aOAUhcp5CeNKJPodw5BcDirSOw7egztI5bUvJjqPzSNAhrA37GrbRBIAjGQpzP0QmgsmuHnQyd2c
 湖北生活,https://stream1.freetv.fun/hu-bei-sheng-huo-3.ctv
 湖北生活,https://stream1.freetv.fun/hu-bei-sheng-huo-8.ctv
-湖北生活,https://stream1.freetv.fun/hu-bei-sheng-huo-4.ctv
 湖北生活,https://stream1.freetv.fun/hu-bei-sheng-huo-2.m3u8
+湖北生活,https://stream1.freetv.fun/hu-bei-sheng-huo-4.ctv
 湖北教育,http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638072a6cbbf6/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUUAdKgLqNB5aOAUhcp5CeNKTFQuOKNd5i0HMa3ydMWIQ6kJ2fBJGJ77BLTXK72CqUYQsX3ZguYt0954s9hfZTfc
 湖北教育,https://stream1.freetv.fun/hu-bei-jiao-yu-4.ctv
 湖北教育,https://stream1.freetv.fun/hu-bei-jiao-yu-1.ctv
@@ -1597,6 +1597,7 @@ CETV-4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8
 金川新闻综合,https://stream1.freetv.fun/jin-chuan-xin-wen-zong-he-2.m3u8
 金川新闻综合,https://stream1.freetv.fun/jin-chuan-xin-wen-zong-he-3.m3u8
 金川新闻综合,https://stream1.freetv.fun/jin-chuan-xin-wen-zong-he-4.m3u8
+青神综合,http://lmt.scqstv.com:80/live1/live1.m3u8
 
 ☘️陕西频道,#genre#
 陕西新闻资讯,http://[2409:8087:7000:20::4]:80/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226357/index.m3u8

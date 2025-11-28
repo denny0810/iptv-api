@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/denny0810/iptv-api/refs/heads/master/output/epg/epg.gz"
-#EXTINF:-1 tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV1.png" group-title="🕘️更新时间",2025-11-28 18:39:32
+#EXTINF:-1 tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV1.png" group-title="🕘️更新时间",2025-11-29 06:33:05
 http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
 #EXTINF:-1 tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV1.png" group-title="📺央视频道",CCTV-1
 http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
@@ -2854,9 +2854,9 @@ https://stream1.freetv.fun/hu-bei-sheng-huo-3.ctv
 #EXTINF:-1 tvg-name="湖北生活" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北生活.png" group-title="☘️湖北频道",湖北生活
 https://stream1.freetv.fun/hu-bei-sheng-huo-8.ctv
 #EXTINF:-1 tvg-name="湖北生活" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北生活.png" group-title="☘️湖北频道",湖北生活
-https://stream1.freetv.fun/hu-bei-sheng-huo-4.ctv
-#EXTINF:-1 tvg-name="湖北生活" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北生活.png" group-title="☘️湖北频道",湖北生活
 https://stream1.freetv.fun/hu-bei-sheng-huo-2.m3u8
+#EXTINF:-1 tvg-name="湖北生活" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北生活.png" group-title="☘️湖北频道",湖北生活
+https://stream1.freetv.fun/hu-bei-sheng-huo-4.ctv
 #EXTINF:-1 tvg-name="湖北教育" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北教育.png" group-title="☘️湖北频道",湖北教育
 http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638072a6cbbf6/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUUAdKgLqNB5aOAUhcp5CeNKTFQuOKNd5i0HMa3ydMWIQ6kJ2fBJGJ77BLTXK72CqUYQsX3ZguYt0954s9hfZTfc
 #EXTINF:-1 tvg-name="湖北教育" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北教育.png" group-title="☘️湖北频道",湖北教育
@@ -3135,6 +3135,8 @@ https://stream1.freetv.fun/jin-chuan-xin-wen-zong-he-2.m3u8
 https://stream1.freetv.fun/jin-chuan-xin-wen-zong-he-3.m3u8
 #EXTINF:-1 tvg-name="金川新闻综合" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/金川新闻综合.png" group-title="☘️四川频道",金川新闻综合
 https://stream1.freetv.fun/jin-chuan-xin-wen-zong-he-4.m3u8
+#EXTINF:-1 tvg-name="青神综合" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/青神综合.png" group-title="☘️四川频道",青神综合
+http://lmt.scqstv.com:80/live1/live1.m3u8
 #EXTINF:-1 tvg-name="陕西新闻资讯" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西新闻资讯.png" group-title="☘️陕西频道",陕西新闻资讯
 http://[2409:8087:7000:20::4]:80/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226357/index.m3u8
 #EXTINF:-1 tvg-name="陕西新闻资讯" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西新闻资讯.png" group-title="☘️陕西频道",陕西新闻资讯
